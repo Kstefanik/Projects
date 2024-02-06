@@ -1,21 +1,20 @@
 import mysql.connector
-#from datetime import datetime, date, timedelta
 import funs
 
 #OPIS: Dodaje kolumnę o nazwie odpowiadającej zadanej dacie i zaznacza '1'(obecny) jeśli legitymacja została zeskanowana, domyślnie przy tworzeniu kolumny każdy ma w obecności '0'(nieobecny)
 
 
-db = mysql.connector.connect(         #Baza danych z panelu AGH(se sprawdźcie co tam wymyśliłem i dajcie jakiś feedback)
-    host='mysql.agh.edu.pl',
-    database='kstefan1',
-    user='kstefan1',
-    password='n3fJcPgKV0eNdv5n',
-    port='3306')
+db = mysql.connector.connect(         #Baza danych
+    host='',
+    database='',
+    user='',
+    password='',
+    port='')
 mycursor = db.cursor()
 scaned_list = []    #lista zeskanowanych id
 groups = [1,2]      #numery grup przedmiotowych
     
-#today = date.today()    
+            
 today = input("Pojad datę: ")                                                                                                 
 class_name = input("Podaj przedmiot: ")    #np AUE
 group_id = int(input("Podaj nr grupy: "))           
